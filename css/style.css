@@ -215,7 +215,10 @@ html, body {
     margin-bottom: 20px;
     font-weight: 700;
 }
-
+.mapa {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
 /* Formulário */
 
 #formulario-contato {
