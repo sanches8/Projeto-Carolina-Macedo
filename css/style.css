@@ -358,6 +358,7 @@ footer {
 
 .footer-links ul li a:hover {
     color: #000000;
+    text-decoration: underline;
 }
 
 .footer-contato p {
@@ -483,39 +484,44 @@ footer {
     .hamburger {
         display: flex; 
     }
+    .fas.fa-bars {
+      font-size: 32px;
+  }
 
-    #nav-menu {
-        display: none; 
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 999;
-    }
 
-    #nav-menu.active {
-        display: flex; 
-    }
 
-    #nav-menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+  #nav-menu {
+    display: none; 
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+}
 
-    #nav-menu ul li {
-        padding: 10px;
-        text-align: center;
-    }
+#nav-menu.active {
+    display: flex; 
+}
 
-    #nav-menu ul li a {
-        text-decoration: none;
-        color: #333;
-        font-size: 18px;
-        display: block;
-    }
+#nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+#nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -547,6 +553,10 @@ footer {
 }
 #hamburger-btn {
     display: none;  
+    font-size: 18px
+}
+#hamburger-btn i {
+    font-size: 25px; /* diminui o ícone */
 }
 
 /* Exibir o menu */
