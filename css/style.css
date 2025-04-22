@@ -169,7 +169,7 @@ html, body {
 }
 .secao-cards img {
     width: 100%;
-    height: auto;
+    height: 70%;
     border-radius: 15px;
     object-fit: cover;
     display: block;
@@ -186,7 +186,7 @@ html, body {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 5; 
-    line-height: 18px;
+    line-height: 28px;
     -webkit-box-orient: vertical;
 }
 
@@ -471,7 +471,7 @@ footer {
         margin-bottom: 15px;
         font-size: 16px;
         width: 100%;
-        box-sizing: border-box; /* impede que padding estoure o container */
+        box-sizing: border-box; 
     }
     /* Rodapé */
     .footer-container {
@@ -559,7 +559,7 @@ footer {
     font-size: 18px
 }
 #hamburger-btn i {
-    font-size: 25px; /* diminui o ícone */
+    font-size: 25px; 
 }
 
 /* Exibir o menu */

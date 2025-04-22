@@ -6,7 +6,7 @@ hamburgerBtn.addEventListener("click", function () {
   navMenu.classList.toggle("visible");
 });
 
-// Fechar o menu após clicar em um lino
+// Fechar o menu após clicar em um link
 document.querySelectorAll('#nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('visible');
