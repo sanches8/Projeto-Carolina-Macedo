@@ -365,7 +365,7 @@ body {
               <div class="row">
                 <div class="col-md-4 mb-3">
                   <label for="turma" class="form-label">Turma</label>
-                  <input type="text" class="form-control" id="turma" required placeholder="Ex: 1º A" />
+                  <input type="text" class="form-control" id="turma" required placeholder="Ex: 1º A" maxlength="20" />
                   <div class="invalid-feedback" id="turma-feedback"></div>
                 </div>
 
@@ -388,24 +388,24 @@ body {
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="responsavel" class="form-label">Responsável</label>
-                  <input type="text" class="form-control" id="responsavel" required placeholder="Nome do responsável" />
+                  <input type="text" class="form-control" id="responsavel" required placeholder="Nome do responsável" maxlength="50" />
                   <div class="invalid-feedback" id="responsavel-feedback"></div>
                 </div>
 
                 <div class="col-md-6 mb-3">
                   <label for="telefone" class="form-label">Telefone</label>
-                  <input type="text" class="form-control" id="telefone" placeholder="(00) 00000-0000" />
+                  <input type="text" class="form-control" id="telefone" required placeholder="(00) 00000-0000" maxlength="15" />
                 </div>
               </div>
 
               <div class="mb-3">
                 <label for="endereco" class="form-label">Endereço</label>
-                <textarea class="form-control" id="endereco" rows="2" placeholder="Rua, número, bairro"></textarea>
+                <textarea class="form-control" id="endereco" rows="2" required placeholder="Rua, número, bairro" maxlength="150"></textarea>
               </div>
 
               <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="email@escola.com" />
+                <input type="email" class="form-control" id="email" required placeholder="email@escola.com" />
               </div>
 
               <div class="d-flex justify-content-between">
@@ -484,6 +484,7 @@ body {
         document.getElementById('data-nascimento-feedback').textContent = '';
       }
     }
+    
   </script>
 </body>
 
