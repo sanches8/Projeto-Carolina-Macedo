@@ -30,10 +30,6 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
             throw new Error('Por favor, informe sua senha')
         }
 
-<<<<<<< HEAD
-=======
-        // Validar formato do e-mail
->>>>>>> c1b5ac7a38619ca87750cb526ad96b3c7b237d99
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
             email.classList.add('is-invalid')
             throw new Error('Por favor, informe um e-mail válido')
@@ -46,20 +42,11 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
 
         if (error) throw error
 
-<<<<<<< HEAD
         messageDiv.innerHTML = `
             <div class="alert alert-success alert-dismissible fade show alert-fixed" role="alert">
                 <i class="fas fa-check-circle me-2"></i>Login realizado com sucesso! Redirecionando...
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-=======
-            =
-            messageDiv.innerHTML = `
-            <div class="alert alert-success alert-dismissible fade show alert-fixed" role="alert">
-    <i class="fas fa-check-circle me-2"></i>Login realizado com sucesso! Redirecionando...
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
->>>>>>> c1b5ac7a38619ca87750cb526ad96b3c7b237d99
         `
 
         localStorage.setItem('session', JSON.stringify(data.session))
@@ -68,10 +55,6 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
         }, 1500)
 
     } catch (error) {
-<<<<<<< HEAD
-=======
-
->>>>>>> c1b5ac7a38619ca87750cb526ad96b3c7b237d99
         console.error('Erro no login:', error)
 
         let errorMessage = 'Erro durante o login'
@@ -79,7 +62,6 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
             errorMessage = 'E-mail ou senha incorretos'
             email.classList.add('is-invalid')
             password.classList.add('is-invalid')
-<<<<<<< HEAD
             messageDiv.innerHTML = `
                 <div class="alert alert-danger alert-dismissible fade show alert-top" role="alert">
                     <i class="fas fa-exclamation-circle me-2"></i>${errorMessage}
@@ -106,43 +88,18 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
         }
 
     } finally {
-=======
-        } else if (error.message.includes('Email not confirmed')) {
-            errorMessage = 'E-mail não confirmado. Verifique sua caixa de entrada.'
-            email.classList.add('is-invalid')
-        } else {
-            errorMessage = error.message || 'Erro desconhecido ao tentar fazer login'
-        }
-
-        messageDiv.innerHTML = `
-            <div class="alert alert-danger alert-dismissible fade show alert-top" role="alert">
-            <i class="fas fa-exclamation-circle me-2"></i>${errorMessage}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    `;
-
-    } finally {
-        // Restaurar botão
->>>>>>> c1b5ac7a38619ca87750cb526ad96b3c7b237d99
         if (loginButton) {
             loginButton.disabled = false
             loginButton.innerHTML = '<i class="fas fa-sign-in-alt me-2"></i>Entrar'
         }
     }
 })
-<<<<<<< HEAD
 //Mensagem
-=======
-
->>>>>>> c1b5ac7a38619ca87750cb526ad96b3c7b237d99
 document.getElementById('forgotPasswordLink')?.addEventListener('click', async (e) => {
     e.preventDefault()
     const email = document.getElementById('email').value.trim()
     const messageDiv = document.getElementById('message')
-<<<<<<< HEAD
     const originalContent = document.getElementById('forgotPasswordLink').innerHTML
-=======
->>>>>>> c1b5ac7a38619ca87750cb526ad96b3c7b237d99
 
     messageDiv.innerHTML = ''
     document.getElementById('email').classList.remove('is-invalid')
@@ -170,13 +127,7 @@ document.getElementById('forgotPasswordLink')?.addEventListener('click', async (
     }
 
     try {
-<<<<<<< HEAD
         const forgotPasswordLink = document.getElementById('forgotPasswordLink')
-=======
-
-        const forgotPasswordLink = document.getElementById('forgotPasswordLink')
-        const originalContent = forgotPasswordLink.innerHTML
->>>>>>> c1b5ac7a38619ca87750cb526ad96b3c7b237d99
         forgotPasswordLink.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...'
 
         const { error } = await supabase.auth.resetPasswordForEmail(email, {
